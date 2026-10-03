@@ -1,0 +1,17 @@
+import * as Prisma from './internal/prismaNamespaceBrowser.js';
+export { Prisma };
+export * as $Enums from './enums.js';
+export * from './enums.js';
+export type auth_group = Prisma.auth_groupModel;
+export type auth_group_permissions = Prisma.auth_group_permissionsModel;
+export type auth_permission = Prisma.auth_permissionModel;
+export type auth_user = Prisma.auth_userModel;
+export type auth_user_groups = Prisma.auth_user_groupsModel;
+export type auth_user_user_permissions = Prisma.auth_user_user_permissionsModel;
+export type django_admin_log = Prisma.django_admin_logModel;
+export type django_content_type = Prisma.django_content_typeModel;
+export type django_migrations = Prisma.django_migrationsModel;
+export type django_session = Prisma.django_sessionModel;
+export type next_month = Prisma.next_monthModel;
+export type tmp_data = Prisma.tmp_dataModel;
+export type tmp_load_data = Prisma.tmp_load_dataModel;

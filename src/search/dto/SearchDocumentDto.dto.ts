@@ -3,9 +3,9 @@ import { IsNotEmpty, IsString } from 'class-validator';
 export class SearchDocumentDto {
   @IsString()
   @IsNotEmpty()
-  tipoDocumento: string;
+  kindDocument: string;
 
   @IsString()
   @IsNotEmpty()
-  numeroDocumento: string;
+  documentNumber: string;
 }

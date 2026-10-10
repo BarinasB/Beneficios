@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { IsNotEmpty, IsString } from 'class-validator';
 export class SearchDocumentDto {
-    tipoDocumento;
-    numeroDocumento;
+    kindDocument;
+    documentNumber;
 }
 __decorate([
     IsString(),
     IsNotEmpty(),
     __metadata("design:type", String)
-], SearchDocumentDto.prototype, "tipoDocumento", void 0);
+], SearchDocumentDto.prototype, "kindDocument", void 0);
 __decorate([
     IsString(),
     IsNotEmpty(),
     __metadata("design:type", String)
-], SearchDocumentDto.prototype, "numeroDocumento", void 0);
+], SearchDocumentDto.prototype, "documentNumber", void 0);
 //# sourceMappingURL=SearchDocumentDto.dto.js.map

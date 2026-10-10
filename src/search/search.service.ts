@@ -13,8 +13,8 @@ export class SearchService {
 
         const User = await this.prisma.tmp_data.findFirst({
             where: {
-                kind_document: searchDocumentDto.tipoDocumento,
-                document: searchDocumentDto.numeroDocumento,
+                kind_document: searchDocumentDto.kindDocument,
+                document: searchDocumentDto.documentNumber,
             },
         });
 
@@ -27,4 +27,6 @@ export class SearchService {
     
 
     }
+
+    
 }

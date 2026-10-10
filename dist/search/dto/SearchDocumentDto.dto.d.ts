@@ -1,4 +1,4 @@
 export declare class SearchDocumentDto {
-    tipoDocumento: string;
-    numeroDocumento: string;
+    kindDocument: string;
+    documentNumber: string;
 }

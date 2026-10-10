@@ -19,3 +19,4 @@ export type django_session = Prisma.django_sessionModel;
 export type next_month = Prisma.next_monthModel;
 export type tmp_data = Prisma.tmp_dataModel;
 export type tmp_load_data = Prisma.tmp_load_dataModel;
+export type app_user = Prisma.app_userModel;

@@ -409,7 +409,8 @@ export const ModelName = {
   django_session: 'django_session',
   next_month: 'next_month',
   tmp_data: 'tmp_data',
-  tmp_load_data: 'tmp_load_data'
+  tmp_load_data: 'tmp_load_data',
+  app_user: 'app_user'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -425,7 +426,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "auth_group" | "auth_group_permissions" | "auth_permission" | "auth_user" | "auth_user_groups" | "auth_user_user_permissions" | "django_admin_log" | "django_content_type" | "django_migrations" | "django_session" | "next_month" | "tmp_data" | "tmp_load_data"
+    modelProps: "auth_group" | "auth_group_permissions" | "auth_permission" | "auth_user" | "auth_user_groups" | "auth_user_user_permissions" | "django_admin_log" | "django_content_type" | "django_migrations" | "django_session" | "next_month" | "tmp_data" | "tmp_load_data" | "app_user"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -1287,6 +1288,72 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    app_user: {
+      payload: Prisma.$app_userPayload<ExtArgs>
+      fields: Prisma.app_userFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.app_userFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.app_userFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        findFirst: {
+          args: Prisma.app_userFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.app_userFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        findMany: {
+          args: Prisma.app_userFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>[]
+        }
+        create: {
+          args: Prisma.app_userCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        createMany: {
+          args: Prisma.app_userCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        delete: {
+          args: Prisma.app_userDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        update: {
+          args: Prisma.app_userUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        deleteMany: {
+          args: Prisma.app_userDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.app_userUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        upsert: {
+          args: Prisma.app_userUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>
+        }
+        aggregate: {
+          args: Prisma.App_userAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateApp_user>
+        }
+        groupBy: {
+          args: Prisma.app_userGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.App_userGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.app_userCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.App_userCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -1462,6 +1529,20 @@ export const Tmp_load_dataScalarFieldEnum = {
 export type Tmp_load_dataScalarFieldEnum = (typeof Tmp_load_dataScalarFieldEnum)[keyof typeof Tmp_load_dataScalarFieldEnum]
 
 
+export const App_userScalarFieldEnum = {
+  id: 'id',
+  username: 'username',
+  email: 'email',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type App_userScalarFieldEnum = (typeof App_userScalarFieldEnum)[keyof typeof App_userScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -1564,6 +1645,16 @@ export const tmp_load_dataOrderByRelevanceFieldEnum = {
 } as const
 
 export type tmp_load_dataOrderByRelevanceFieldEnum = (typeof tmp_load_dataOrderByRelevanceFieldEnum)[keyof typeof tmp_load_dataOrderByRelevanceFieldEnum]
+
+
+export const app_userOrderByRelevanceFieldEnum = {
+  username: 'username',
+  email: 'email',
+  firstName: 'firstName',
+  lastName: 'lastName'
+} as const
+
+export type app_userOrderByRelevanceFieldEnum = (typeof app_userOrderByRelevanceFieldEnum)[keyof typeof app_userOrderByRelevanceFieldEnum]
 
 
 
@@ -1777,6 +1868,7 @@ export type GlobalOmitConfig = {
   next_month?: Prisma.next_monthOmit
   tmp_data?: Prisma.tmp_dataOmit
   tmp_load_data?: Prisma.tmp_load_dataOmit
+  app_user?: Prisma.app_userOmit
 }
 
 /* Types for Logging */

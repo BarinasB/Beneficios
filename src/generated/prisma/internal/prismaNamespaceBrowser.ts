@@ -63,7 +63,8 @@ export const ModelName = {
   django_session: 'django_session',
   next_month: 'next_month',
   tmp_data: 'tmp_data',
-  tmp_load_data: 'tmp_load_data'
+  tmp_load_data: 'tmp_load_data',
+  app_user: 'app_user'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -218,6 +219,20 @@ export const Tmp_load_dataScalarFieldEnum = {
 export type Tmp_load_dataScalarFieldEnum = (typeof Tmp_load_dataScalarFieldEnum)[keyof typeof Tmp_load_dataScalarFieldEnum]
 
 
+export const App_userScalarFieldEnum = {
+  id: 'id',
+  username: 'username',
+  email: 'email',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type App_userScalarFieldEnum = (typeof App_userScalarFieldEnum)[keyof typeof App_userScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -320,4 +335,14 @@ export const tmp_load_dataOrderByRelevanceFieldEnum = {
 } as const
 
 export type tmp_load_dataOrderByRelevanceFieldEnum = (typeof tmp_load_dataOrderByRelevanceFieldEnum)[keyof typeof tmp_load_dataOrderByRelevanceFieldEnum]
+
+
+export const app_userOrderByRelevanceFieldEnum = {
+  username: 'username',
+  email: 'email',
+  firstName: 'firstName',
+  lastName: 'lastName'
+} as const
+
+export type app_userOrderByRelevanceFieldEnum = (typeof app_userOrderByRelevanceFieldEnum)[keyof typeof app_userOrderByRelevanceFieldEnum]
 

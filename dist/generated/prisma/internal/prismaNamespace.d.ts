@@ -173,6 +173,7 @@ export declare const ModelName: {
     readonly next_month: "next_month";
     readonly tmp_data: "tmp_data";
     readonly tmp_load_data: "tmp_load_data";
+    readonly app_user: "app_user";
 };
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export interface TypeMapCb<GlobalOmitOptions = {}> extends runtime.Types.Utils.Fn<{
@@ -185,7 +186,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         omit: GlobalOmitOptions;
     };
     meta: {
-        modelProps: "auth_group" | "auth_group_permissions" | "auth_permission" | "auth_user" | "auth_user_groups" | "auth_user_user_permissions" | "django_admin_log" | "django_content_type" | "django_migrations" | "django_session" | "next_month" | "tmp_data" | "tmp_load_data";
+        modelProps: "auth_group" | "auth_group_permissions" | "auth_permission" | "auth_user" | "auth_user_groups" | "auth_user_user_permissions" | "django_admin_log" | "django_content_type" | "django_migrations" | "django_session" | "next_month" | "tmp_data" | "tmp_load_data" | "app_user";
         txIsolationLevel: TransactionIsolationLevel;
     };
     model: {
@@ -1047,6 +1048,72 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
                 };
             };
         };
+        app_user: {
+            payload: Prisma.$app_userPayload<ExtArgs>;
+            fields: Prisma.app_userFieldRefs;
+            operations: {
+                findUnique: {
+                    args: Prisma.app_userFindUniqueArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload> | null;
+                };
+                findUniqueOrThrow: {
+                    args: Prisma.app_userFindUniqueOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                findFirst: {
+                    args: Prisma.app_userFindFirstArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload> | null;
+                };
+                findFirstOrThrow: {
+                    args: Prisma.app_userFindFirstOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                findMany: {
+                    args: Prisma.app_userFindManyArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>[];
+                };
+                create: {
+                    args: Prisma.app_userCreateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                createMany: {
+                    args: Prisma.app_userCreateManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                delete: {
+                    args: Prisma.app_userDeleteArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                update: {
+                    args: Prisma.app_userUpdateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                deleteMany: {
+                    args: Prisma.app_userDeleteManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                updateMany: {
+                    args: Prisma.app_userUpdateManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                upsert: {
+                    args: Prisma.app_userUpsertArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$app_userPayload>;
+                };
+                aggregate: {
+                    args: Prisma.App_userAggregateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.AggregateApp_user>;
+                };
+                groupBy: {
+                    args: Prisma.app_userGroupByArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.App_userGroupByOutputType>[];
+                };
+                count: {
+                    args: Prisma.app_userCountArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.App_userCountAggregateOutputType> | number;
+                };
+            };
+        };
     };
 } & {
     other: {
@@ -1175,6 +1242,17 @@ export declare const Tmp_load_dataScalarFieldEnum: {
     readonly state: "state";
 };
 export type Tmp_load_dataScalarFieldEnum = (typeof Tmp_load_dataScalarFieldEnum)[keyof typeof Tmp_load_dataScalarFieldEnum];
+export declare const App_userScalarFieldEnum: {
+    readonly id: "id";
+    readonly username: "username";
+    readonly email: "email";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+    readonly isActive: "isActive";
+    readonly createdAt: "createdAt";
+    readonly updatedAt: "updatedAt";
+};
+export type App_userScalarFieldEnum = (typeof App_userScalarFieldEnum)[keyof typeof App_userScalarFieldEnum];
 export declare const SortOrder: {
     readonly asc: "asc";
     readonly desc: "desc";
@@ -1243,6 +1321,13 @@ export declare const tmp_load_dataOrderByRelevanceFieldEnum: {
     readonly state: "state";
 };
 export type tmp_load_dataOrderByRelevanceFieldEnum = (typeof tmp_load_dataOrderByRelevanceFieldEnum)[keyof typeof tmp_load_dataOrderByRelevanceFieldEnum];
+export declare const app_userOrderByRelevanceFieldEnum: {
+    readonly username: "username";
+    readonly email: "email";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+};
+export type app_userOrderByRelevanceFieldEnum = (typeof app_userOrderByRelevanceFieldEnum)[keyof typeof app_userOrderByRelevanceFieldEnum];
 export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>;
 export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>;
 export type BigIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'BigInt'>;
@@ -1290,6 +1375,7 @@ export type GlobalOmitConfig = {
     next_month?: Prisma.next_monthOmit;
     tmp_data?: Prisma.tmp_dataOmit;
     tmp_load_data?: Prisma.tmp_load_dataOmit;
+    app_user?: Prisma.app_userOmit;
 };
 export type LogLevel = 'info' | 'query' | 'warn' | 'error';
 export type LogDefinition = {

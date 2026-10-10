@@ -11,4 +11,5 @@ export type * from './models/django_session.js';
 export type * from './models/next_month.js';
 export type * from './models/tmp_data.js';
 export type * from './models/tmp_load_data.js';
+export type * from './models/app_user.js';
 export type * from './commonInputTypes.js';

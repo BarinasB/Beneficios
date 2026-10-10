@@ -69,5 +69,8 @@ export interface PrismaClient<in LogOpts extends Prisma.LogLevel = never, in out
     get tmp_load_data(): Prisma.tmp_load_dataDelegate<ExtArgs, {
         omit: OmitOpts;
     }>;
+    get app_user(): Prisma.app_userDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
 }
 export declare function getPrismaClientClass(): PrismaClientConstructor;

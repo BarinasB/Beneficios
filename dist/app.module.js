@@ -12,6 +12,7 @@ import { AppService } from './app.service.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { DatabaseTestService } from './database-test.service.js';
 import { AuthModule } from './auth/auth.module.js';
+import { SearchModule } from './search/search.module.js';
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 let AppModule = class AppModule {
 };
@@ -26,7 +27,7 @@ AppModule = __decorate([
                 appKey: 'YOUR_APP_KEY',
                 appSecret: 'YOUR_APP_SECRET',
                 serviceId: 'backend',
-            }), AuthModule,
+            }), AuthModule, SearchModule,
         ],
         controllers: [AppController],
         providers: [AppService, DatabaseTestService],

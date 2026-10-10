@@ -21,7 +21,8 @@ export const ModelName = {
     django_session: 'django_session',
     next_month: 'next_month',
     tmp_data: 'tmp_data',
-    tmp_load_data: 'tmp_load_data'
+    tmp_load_data: 'tmp_load_data',
+    app_user: 'app_user'
 };
 export const TransactionIsolationLevel = runtime.makeStrictEnum({
     ReadUncommitted: 'ReadUncommitted',
@@ -113,6 +114,16 @@ export const Tmp_load_dataScalarFieldEnum = {
     document: 'document',
     state: 'state'
 };
+export const App_userScalarFieldEnum = {
+    id: 'id',
+    username: 'username',
+    email: 'email',
+    firstName: 'firstName',
+    lastName: 'lastName',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+};
 export const SortOrder = {
     asc: 'asc',
     desc: 'desc'
@@ -168,5 +179,11 @@ export const tmp_load_dataOrderByRelevanceFieldEnum = {
     kind_document: 'kind_document',
     document: 'document',
     state: 'state'
+};
+export const app_userOrderByRelevanceFieldEnum = {
+    username: 'username',
+    email: 'email',
+    firstName: 'firstName',
+    lastName: 'lastName'
 };
 //# sourceMappingURL=prismaNamespaceBrowser.js.map

@@ -24,6 +24,7 @@ export declare const ModelName: {
     readonly next_month: "next_month";
     readonly tmp_data: "tmp_data";
     readonly tmp_load_data: "tmp_load_data";
+    readonly app_user: "app_user";
 };
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export declare const TransactionIsolationLevel: {
@@ -130,6 +131,17 @@ export declare const Tmp_load_dataScalarFieldEnum: {
     readonly state: "state";
 };
 export type Tmp_load_dataScalarFieldEnum = (typeof Tmp_load_dataScalarFieldEnum)[keyof typeof Tmp_load_dataScalarFieldEnum];
+export declare const App_userScalarFieldEnum: {
+    readonly id: "id";
+    readonly username: "username";
+    readonly email: "email";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+    readonly isActive: "isActive";
+    readonly createdAt: "createdAt";
+    readonly updatedAt: "updatedAt";
+};
+export type App_userScalarFieldEnum = (typeof App_userScalarFieldEnum)[keyof typeof App_userScalarFieldEnum];
 export declare const SortOrder: {
     readonly asc: "asc";
     readonly desc: "desc";
@@ -198,3 +210,10 @@ export declare const tmp_load_dataOrderByRelevanceFieldEnum: {
     readonly state: "state";
 };
 export type tmp_load_dataOrderByRelevanceFieldEnum = (typeof tmp_load_dataOrderByRelevanceFieldEnum)[keyof typeof tmp_load_dataOrderByRelevanceFieldEnum];
+export declare const app_userOrderByRelevanceFieldEnum: {
+    readonly username: "username";
+    readonly email: "email";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+};
+export type app_userOrderByRelevanceFieldEnum = (typeof app_userOrderByRelevanceFieldEnum)[keyof typeof app_userOrderByRelevanceFieldEnum];
